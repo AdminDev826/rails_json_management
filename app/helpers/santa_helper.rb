@@ -1,0 +1,2 @@
+module SantaHelper
+end
