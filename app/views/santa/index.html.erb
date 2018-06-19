@@ -1,1 +1,12 @@
-santa index
+<div style="text-align: center;">
+	<h2>Secret Santa</h2>
+	<%= form_tag("/", method: :get) do %>
+		<%= submit_tag("Assign Santa") %>
+	  <div>
+	  	<%= text_area_tag(:santa_input, @santa_input, size: "60x20") %>
+	  </div>
+	  <div>
+			<%= text_area_tag(:santa_result, @santa_result, size: "60x20", readonly: true) %>
+		</div>
+	<% end %>
+</div>
