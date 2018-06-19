@@ -33,7 +33,7 @@ class SantaController < ApplicationController
 			f_length = key_elem.length if key_elem.length > f_length
 		end
 		str_data = ""
-		result_hash.map{|k, v| str_data += (str_data.empty? ? "" : "\r\n") + k.ljust(f_length, " ") + " => " + v}
+		result_hash.map{|k, v| str_data += (str_data.empty? ? "" : "\r\n") + k.to_s.ljust(f_length, " ") + " => " + v.to_s}
 		str_data
 	end
 
